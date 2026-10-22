@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cymanneth Blur Timer — политика конфиденциальности</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.6rem; margin-bottom: .2em; }
+  h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  .meta { opacity: .7; font-size: .9rem; }
+  hr { margin: 2.5em 0; border: 0; border-top: 1px solid rgba(128,128,128,.4); }
+  code { background: rgba(128,128,128,.18); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Политика конфиденциальности — Cymanneth Blur Timer</h1>
+<p class="meta">Действует с 22 октября 2026 г. · <a href="#en">English version below</a></p>
+
+<p>Cymanneth Blur Timer («расширение») скрывает выбранные моменты видео блюром по таймкодам, которые задаёт сам пользователь.
+Коротко: <strong>расширение не собирает, не передаёт и не продаёт никакие данные о вас</strong>. Всё, что оно запоминает, хранится только в вашем браузере.</p>
+
+<h2>Какие данные хранятся и где</h2>
+<ul>
+  <li><strong>Тайминги блюра</strong> (начало и конец интервалов), которые вы добавили. Они привязаны к странице, на которой вы их добавили; для привязки используется <em>хеш</em> адреса страницы (без части после <code>#</code>), а не сам адрес.</li>
+  <li><strong>Настройки</strong>: сила блюра, режим скрытия, показ маркеров на полосе прогресса, выбор для сайта raspberry.pub.</li>
+  <li><strong>Черновик</strong> недописанного интервала (во временном хранилище сессии браузера, стирается при закрытии браузера).</li>
+</ul>
+<p>Всё это лежит в <code>chrome.storage</code> вашего браузера на вашем устройстве. Расширение не отправляет эти данные на серверы разработчика или третьих лиц — у расширения нет собственных серверов, аналитики, счётчиков, рекламы и отслеживания.</p>
+
+<h2>Что расширение делает на веб-страницах</h2>
+<ul>
+  <li>Ищет на открытой странице элементы <code>&lt;video&gt;</code> <em>только если для этой страницы заданы тайминги</em>, и накладывает на видео размытие в нужные моменты. Содержимое страниц, видео, пароли, формы и история просмотров не читаются и не сохраняются.</li>
+  <li>Читает текущее время воспроизведения видео, когда вы нажимаете кнопку «⏱» или горячую клавишу, чтобы подставить его как начало или конец интервала.</li>
+  <li>На сайте raspberry.pub и только по вашему согласию (диалог «Применить тайминги?») или по нажатию кнопки сканирования во вкладке «Raspberry» расширение читает с открытой страницы список таймкодов и локально превращает их в интервалы блюра. Эти данные никуда не передаются.</li>
+</ul>
+
+<h2>Сетевые запросы</h2>
+<p>Расширение не выполняет собственных сетевых запросов (нет <code>fetch</code>, <code>XMLHttpRequest</code>, WebSocket и т. п.) и не загружает и не исполняет удалённый код. Картинки и скрипты упакованы внутри расширения.</p>
+
+<h2>Передача третьим лицам</h2>
+<p>Данные не продаются, не передаются и не раскрываются третьим лицам, не используются для рекламы, профилирования или оценки кредитоспособности.</p>
+
+<h2>Разрешения браузера</h2>
+<ul>
+  <li><code>storage</code> — локальное хранение таймингов и настроек.</li>
+  <li><code>webNavigation</code> — доставка команд во фреймы страницы (плееры часто находятся во вложенных iframe) и отслеживание смены адреса на сайтах-одностраничниках.</li>
+  <li><code>scripting</code> — разовое чтение списка таймкодов на странице raspberry.pub по вашему нажатию.</li>
+  <li>Доступ к сайтам (<code>&lt;all_urls&gt;</code>) — видео может находиться на любом сайте; без этого расширение не смогло бы размыть видео на выбранной вами странице.</li>
+</ul>
+
+<h2>Удаление данных</h2>
+<p>Кнопка «Очистить» во вкладке «Таймер» удаляет тайминги текущей страницы. Все данные расширения удаляются при его удалении из браузера.</p>
+
+<h2>Дети</h2>
+<p>Расширение не собирает данные ни о ком, включая детей младше 13 лет.</p>
+
+<h2>Изменения политики</h2>
+<p>При изменении политики новая версия будет опубликована по этому адресу, а дата вверху страницы обновлена.</p>
+
+<h2>Контакты</h2>
+<p>Вопросы о конфиденциальности: <strong>[ВАШ E-MAIL]</strong></p>
+
+<hr>
+
+<div id="en" lang="en">
+<h1>Privacy Policy — Cymanneth Blur Timer</h1>
+<p class="meta">Effective October 22, 2026</p>
+
+<p>Cymanneth Blur Timer (the “extension”) blurs chosen moments of a video at timecodes set by the user.
+In short: <strong>the extension does not collect, transmit or sell any data about you</strong>. Everything it remembers stays in your browser.</p>
+
+<h2>What is stored, and where</h2>
+<ul>
+  <li><strong>Blur timings</strong> (interval start/end) you add. They are tied to the page you added them on, using a <em>hash</em> of the page address (without the <code>#</code> fragment), not the address itself.</li>
+  <li><strong>Settings</strong>: blur strength, hiding mode, seek-bar markers on/off, a preference for raspberry.pub.</li>
+  <li>A <strong>draft</strong> of an unfinished interval (kept in session storage, cleared when the browser closes).</li>
+</ul>
+<p>All of it lives in your browser’s <code>chrome.storage</code> on your device. The extension does not send it to the developer or any third party — it has no servers, analytics, ads or tracking.</p>
+
+<h2>What the extension does on web pages</h2>
+<ul>
+  <li>It looks for <code>&lt;video&gt;</code> elements <em>only when timings exist for that page</em> and blurs the video at the chosen moments. Page content, passwords, forms and browsing history are not read or stored.</li>
+  <li>It reads the video’s current playback time when you press the “⏱” button or the hotkey, to fill in an interval boundary.</li>
+  <li>On raspberry.pub, only with your consent (the “Apply timings?” dialog) or when you press the scan button in the “Raspberry” tab, it reads a list of timecodes from the open page and converts them locally into blur intervals. Nothing is transmitted.</li>
+</ul>
+
+<h2>Network requests</h2>
+<p>The extension makes no network requests of its own and does not download or execute remote code. All images and scripts are bundled inside the extension.</p>
+
+<h2>Sharing</h2>
+<p>No data is sold, shared or disclosed to third parties, or used for advertising, profiling or creditworthiness.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><code>storage</code> — local storage of timings and settings.</li>
+  <li><code>webNavigation</code> — delivering commands to frames of a page (players often live in iframes) and detecting URL changes on single-page sites.</li>
+  <li><code>scripting</code> — one-off reading of the timecode list on raspberry.pub when you click the scan button.</li>
+  <li>Site access (<code>&lt;all_urls&gt;</code>) — a video can be on any site; without it the extension could not blur the video on the page you chose.</li>
+</ul>
+
+<h2>Deleting data</h2>
+<p>The “Clear” button in the “Timer” tab removes the timings of the current page. All extension data is removed when you uninstall it.</p>
+
+<h2>Children</h2>
+<p>The extension collects no data from anyone, including children under 13.</p>
+
+<h2>Changes</h2>
+<p>Changes to this policy will be published at this address with an updated date.</p>
+
+<h2>Contact</h2>
+<p>Privacy questions: <strong>[YOUR E-MAIL]</strong></p>
+</div>
+
+</body>
+</html>
